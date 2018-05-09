@@ -1,0 +1,254 @@
+
+:root {
+  --jop-blue: #072A4D;
+  --secondary-color:#EFEFEF;
+}
+
+body{
+  background: var(--secondary-color);
+  color: grey;
+}
+
+.header{
+  height: 10%;
+  width: 100%;
+  background-image: linear-gradient(279deg, #497cc2, #0c2c4c);
+  color: white;
+  margin-bottom: 5%;
+  padding: 25px 15px;
+}
+
+.logo{
+  height: 30px;
+  width: 185px;
+}
+
+.header h1{
+  margin-left: 1%;
+}
+
+.flex{
+display: flex;
+}
+
+.container{
+  width: 80%;
+  margin: auto;
+}
+
+.search{
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0px;
+}
+
+.search .input{
+  margin-bottom:10px; 
+  width: 40%;
+}
+
+.search .input:nth-child(even){
+  margin-left:20px;  
+}
+/* media query thisout^ */
+
+label{
+  display: block;
+  font-size: .75em;
+}
+
+.input input{
+  width: 100%;
+  border-radius: 3px;
+  height: 34px;
+  font-size:16px;
+}
+
+input:disabled{
+  background: var(--secondary-color);
+}
+
+
+.button{
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.button button{
+    background: var(--jop-blue);
+    border-radius: 5px;
+    color: white;
+    padding: 0em;
+    height: 2.5em;
+    width: 6em;
+    font-size: 1.1em;
+    margin-bottom: 2%;
+    margin-top: 2%;
+}
+
+hr.style-one {
+  border-top: 1px solid #8c8b8b;
+  flex-grow: 1;
+  width: 80%;
+  margin: auto;
+}
+
+.hide{
+  display: none;
+}
+
+
+.results{
+  width: 100%;
+  text-align: center;
+}
+
+.results h3{
+  font-size: 1em;
+  color: gray;
+}
+
+/* pagination */
+.pagination span {
+    color: grey;
+    float: left;
+    padding: 4px 15px;
+    text-decoration: none;
+    transition: background-color .3s;
+}
+
+/* Style the active/current link */
+.pagination span.active {
+    color: black;
+}
+
+/* Add a grey background color on mouse-over */
+.pagination span:hover:not(.active) {
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+/* Result Items */
+
+.result-item{
+  flex-wrap: wrap;
+  margin-bottom: 3%;
+  background: white;
+  border-radius: 4px;
+}
+.license,.stars,.fork{
+  border-left: 2px solid rgba(243, 237, 237, 0.973); 
+  width: 12%;
+  text-align: center;
+}
+
+.title{
+  width: 60%;
+  text-align: left;
+  margin-left: 2%;
+}
+
+.title a{
+  text-decoration: none
+}
+
+@media (max-width : 580px) {
+  .search .input:nth-child(even){
+    margin-left: 0px;  
+  }
+  .license,.stars,.fork{
+  width: 33%;
+  margin-top: 3%;
+}
+.stars{
+  border-left: 0px solid grey;
+}
+.title{
+  width: 100%;
+  text-align: left;
+}
+.hide{
+  display: block;
+}
+.pagination {
+ margin-top: 5%;   
+}
+.search .input{
+  width: 340px;
+}
+}
+
+.noresults{
+  text-align: center;
+}
+
+/* loading  https://projects.lukehaas.me/css-loaders/*/
+
+.loader,
+.loader:before,
+.loader:after {
+  border-radius: 50%;
+}
+.loader {
+  color: #ffffff;
+  font-size: 11px;
+  text-indent: -99999em;
+  margin: 55px auto;
+  position: relative;
+  width: 10em;
+  height: 10em;
+  box-shadow: inset 0 0 0 1em;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.loader:before,
+.loader:after {
+  position: absolute;
+  content: '';
+}
+.loader:before {
+  width: 5.2em;
+  height: 10.2em;
+  background: var(--secondary-color);
+  border-radius: 10.2em 0 0 10.2em;
+  top: -0.1em;
+  left: -0.1em;
+  -webkit-transform-origin: 5.2em 5.1em;
+  transform-origin: 5.2em 5.1em;
+  -webkit-animation: load2 2s infinite ease 1.5s;
+  animation: load2 2s infinite ease 1.5s;
+}
+.loader:after {
+  width: 5.2em;
+  height: 10.2em;
+  background: var(--secondary-color);
+  border-radius: 0 10.2em 10.2em 0;
+  top: -0.1em;
+  left: 5.1em;
+  -webkit-transform-origin: 0px 5.1em;
+  transform-origin: 0px 5.1em;
+  -webkit-animation: load2 2s infinite ease;
+  animation: load2 2s infinite ease;
+}
+@-webkit-keyframes load2 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load2 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
